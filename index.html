@@ -13,6 +13,22 @@
     <div class="">
         <button onclick="">Analizadorsito </button>
     </div>
+    <textarea name="analizado" rows="10" cols="40" disabled></textarea>
+
+    <script>
+        function backend() {
+            let headersitos = new Headers();
+
+            fetch("https://examen-cloud-david-ramirez.mybluemix.net/api/analyze", {
+                method: "POST",
+                headers: headersitos
+                body: JSON.stringify({
+                    text: document.querySelector("#analyzer").value,
+                }),
+            
+            redirect: "follow",
+        })
+    </script>
 </body>
 
 </html>
